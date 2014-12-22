@@ -7,7 +7,8 @@ shinyServer(function(input, output) {
         df_base$PRICE <- df_base[, input$usage]  # track selected usage/price in new column
         
         df <- df_base %>%  # subset/filter df_base based on user selections
-            filter(PRICE <= 25,  # filter out unreasonable data
+            filter(PRICE <= 25,
+                   PRICE >= 1,  # filter out unreasonable data
                    TDU == input$tdu,
                    RATE_TYPE %in% input$rate_type,
                    PREPAID %in% input$prepaid,

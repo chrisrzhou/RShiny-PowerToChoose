@@ -22,11 +22,13 @@ Throughout the application, the user is empowered with selection widgets to zoom
 
 
 ## Other notes:
-Use the selection widgets to redefine the market conditions on the rankings to be determined, and to zone-in on specific companies by using the `REP Filters`.
+- Use the selection widgets to redefine the market conditions on the rankings to be determined, and to zone-in on specific companies by using the `REP Filters`.
 
-Download the "cleaned" and filtered dataset from the `Download Data` button at the bottom of the page.
+- Download the "cleaned" and filtered dataset from the `Download Data` button at the bottom of the page.
 
-This project/application is not affiliated with any electricity company nor the PUC.  The work is intended as a showcase of R Shiny data visualization capabilities.
+- The `ggvis` library is great for R visualization but has some big limitations due to it being in its infant stages.  It is somewhat difficult to handle dataframes with no data, and this causes the shiny app to terminate.  The syntax is beautiful but a little clunky with some fairly commonly used requests.  Unfortunately, this is the current limitation with designing apps with `ggvis` but I'm definitely excited in seeing this library mature as along with `dplyr`, I think it is moving in for even greater features!  Great thanks to Hadley for all the work and tools he's built for the R community.
+
+- This project/application is not affiliated with any electricity company nor the PUC.  The work is intended as a showcase of R Shiny data visualization capabilities.
 
 
 ## Resources
