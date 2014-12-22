@@ -1,0 +1,33 @@
+h1, h2 {
+    color: steelblue;
+}
+
+h3 {
+    font-size: 1.4em;
+    color: darkgray;
+}
+
+a:link {
+    text-decoration: underline;
+}
+
+.text-small {
+    font-size: 12px;
+    font-style: italic;
+}
+
+tfoot {
+    display: table-header-group;
+}
+
+label[for=rep1] {
+    color: crimson
+}
+
+label[for=rep2] {
+    color: goldenrod
+}
+
+label[for=rep3] {
+    color: darkseagreen
+}
