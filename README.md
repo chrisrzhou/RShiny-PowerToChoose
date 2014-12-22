@@ -30,4 +30,4 @@ This project/application is not affiliated with any electricity company nor the 
 - [Power to Choose](http://www.powertochoose.org/)
 - [PUC](https://www.puc.texas.gov/)
 - [ERCOT](http://www.ercot.com/)
-- [dplyr]http://cran.rstudio.com/web/packages/dplyr/vignettes/introduction.html)
+- [dplyr](http://cran.rstudio.com/web/packages/dplyr/vignettes/introduction.html)
