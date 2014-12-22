@@ -3,7 +3,10 @@
 ## About
 [Power to Choose](http://www.powertochoose.org/) is a consumer choice website set up by the [PUC](https://www.puc.texas.gov/) to provide customers to compare offers and choose from various electricity plans in Texas.
 
-This is a R Shiny data visualization project based on the information made available on powertochoose.org.  The data is received from the CSV download URL and is parsed and reshaped in R using the amazing R package `dplyr`.
+This is a R Shiny data visualization project based on the information made available on powertochoose.org.  You can preview the app at this [AWS EC2 instance](http://ec2-54-183-164-175.us-west-1.compute.amazonaws.com:3838/PowerToChoose/).
+
+
+The data is received from the CSV download URL and is parsed and reshaped in R using the amazing R package `dplyr`.
 
 Throughout the application, the user is empowered with selection widgets to zoom in on data exploration of the dataset.  This site is designed with analysts in mind, and provides summary of information that is otherwise difficult to obtain by referring to the original website, for example:
 
