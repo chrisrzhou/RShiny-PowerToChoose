@@ -1,4 +1,4 @@
-*.~
+*~
 *.sw~
 *.Rdata
-*.rhistory
+*.Rhistory

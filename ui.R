@@ -1,53 +1,44 @@
-# Shiny UI code
-
 shinyUI(fluidPage(
-    tags$head(
-        tags$link(rel="stylesheet", type="text/css", href="app.css")
-    ),
-    tags$link(
-        rel = "stylesheet", 
-        href="https://fonts.googleapis.com/css?family=Roboto+Slab"
-    ),
+    tags$head(tags$link(rel="stylesheet", type="text/css", href="app.css")),
     
-    titlePanel(
-        div(class="header",
-            h1("PTC Shiny App"),
-            p(class="text-small",
-              a(href="http://www.powertochoose.org", target="_blank", "www.powertochoose.org"),
-              "data visualizations created by ",
-              a(href="https://www.linkedin.com/in/chrisrzhou", target="_blank", "Chris Zhou"),
-              "with ",
-              a(href="http://shiny.rstudio.com/", target="_blank", "R Shiny"), ",",
-              a(href="http://ggvis.rstudio.com/", target="_blank", "ggvis"),
-              ", and the amazing dataframe library",
-              a(href="http://cran.rstudio.com/web/packages/dplyr/vignettes/introduction.html", target="_blank", "dplyr")
-            )
-        ),
-        windowTitle = "PTC Shiny App"
-    ),
+    titlePanel("Powertochoose Datavis"),
     
     sidebarLayout(
         sidebarPanel(
-            h3("REP FILTERS"),
-            selectInput("rep1", "Select REP 1:", REPS, REPS[[1]]),
-            selectInput("rep2", "Select REP 2:", REPS, REPS[[2]]),
-            selectInput("rep3", "Select REP 3:", REPS, REPS[[3]]),
+            p(class="text-small", "by chrisrzhou",
+              a(href="https://github.com/chrisrzhou", target="_blank", icon("github")),
+              a(href="http://bl.ocks.org/chrisrzhou", target="_blank", icon("th")),
+              a(href="https://www.linkedin.com/in/chrisrzhou", target="_blank", icon("linkedin"))),
             hr(),
-            h3("MAIN FILTERS"),
-            selectInput("tdu", "Select TDU:", TDUS, TDUS[[1]]),
-            selectInput("usage", "Select Usage:", USAGE, "KWH1000"),
-            checkboxGroupInput("rate_type", "Choose Rate Types:", RATE_TYPES, RATE_TYPES[[1]]),
+            p(class="text-small", "Data visualizations on market rankings of electricity products and prices in the ERCOT electricity market.  All data is derived from the actual PUC website: ",
+              a(href="http://www.powertochoose.org", target="_blank", "www.powertochoose.org")),
             hr(),
-            h3("ADDITIONAL FILTERS"),
-            checkboxGroupInput("prepaid", "Choose Prepaid:", BOOLEANS, BOOLEANS),
-            checkboxGroupInput("tou", "Choose Time-of-Use:", BOOLEANS, BOOLEANS),
-            checkboxGroupInput("promotion", "Choose Promotion:", BOOLEANS, BOOLEANS),
-            sliderInput("term_length_min", "Term Length:", min=0, max=36, value=0),
-            sliderInput("term_length_max", "", min=0, max=36, value=36),
-            sliderInput("renewable_min", "Renewable:", min=0, max=100, value=0),
-            sliderInput("renewable_max", "", min=0, max=100, value=100),
+            
+            h3("Market Filters"),
+            selectInput(inputId="tdu", label="Select TDU:", choices=choices$tdus, selected=choices$tdus[[1]]),
+            selectInput(inputId="usage", label="Select Usage:", choices=choices$usage, selected=choices$usage[[2]]),
+            checkboxGroupInput(inputId="rate_type", label="Choose Rate Types:", choices=choices$rate_types, selected=choices$rate_types[[1]]),
             hr(),
-            downloadButton("downloadData", "Download Data")
+            
+            h3("REP Filters"),
+            selectInput(inputId="rep1", label="Select REP 1:", choices=choices$reps, selected=choices$reps[[1]]),
+            selectInput(inputId="rep2", label="Select REP 2:", choices=choices$reps, selected=choices$reps[[2]]),
+            selectInput(inputId="rep3", label="Select REP 3:", choices=choices$reps, selected=choices$reps[[3]]),
+            p("(REP: Retail Electricity Provider)"),
+            hr(),
+            
+            h3("Additional Filters"),
+            checkboxGroupInput(inputId="prepaid", label="Choose Prepaid:", choices=choices$booleans, selected=choices$booleans),
+            checkboxGroupInput(inputId="tou", label="Choose Time-of-Use:", choices=choices$booleans, selected=choices$booleans),
+            checkboxGroupInput(inputId="promotion", label="Choose Promotion:", choices=choices$booleans, selected=choices$booleans),
+            sliderInput(inputId="term_length_min", label="Term Length:", min=0, max=36, value=0),
+            sliderInput(inputId="term_length_max", label="", min=0, max=36, value=36),
+            sliderInput(inputId="renewable_min", label="Renewable:", min=0, max=100, value=0),
+            sliderInput(inputId="renewable_max", label="", min=0, max=100, value=100),
+            hr(),
+            
+            downloadButton(outputId = "downloadData", label="Download Data"),
+            width=3
         ),
         
         mainPanel(
@@ -55,37 +46,43 @@ shinyUI(fluidPage(
                 tabPanel("Rankings",
                          h2("Rankings"),
                          hr(),
-                         h3("SUMMARY"),
+                         
+                         h3("Summary"),
                          htmlOutput("rankingSummary"),
                          hr(),
-                         h3("PLOT"),
-                         p("Rankings of products at a given price range and associated variables. "),
+                         
+                         h3("Rankings Plot"),
+                         p(class="text-small", "Rankings of products at a given price range and associated variables. "),
                          ggvisOutput("rankings_plot"),
                          hr()
                 ),
                 tabPanel("Market",
                          h2("Market"),
                          hr(),
-                         h3("HISTOGRAM"),
-                         p("Histogram of products at a given price range and binwidth, highlighting selected REPs in the market."),
+                         
+                         h3("Market Histogram"),
+                         p(class="text-small", "Histogram of products at a given price range and binwidth, highlighting selected REPs in the market."),
                          ggvisOutput("market_histogram"),
                          div(class="row offset1", uiOutput("market_histogram_slider")),
                          hr(),
-                         h3("SCATTER PLOT"),
-                         p("Scatterplot of products at a given price range, highlighting selected REPs in the market."),
+                         
+                         h3("Market scatterplot"),
+                         p(class="text-small", "Scatterplot of products at a given price range, highlighting selected REPs in the market."),
                          ggvisOutput("market_scatterplot"),
                          hr()
                 ),
                 tabPanel("Data",
                          h2("Data"),
                          hr(),
-                         h3("SEARCH TABLE"),
-                         p("This section provides a searcheable datatable similar to that found on",
+                         
+                         h3("Datatable"),
+                         p(class="text-small", "This section provides a search datatable similar to that found on",
                            a(href="http://www.powertochoose.org", target="_blank", "www.powertochoose.org")),
                          dataTableOutput("datatable"),
                          hr()
                 )
-            )
+            ),
+            width=9
         )
     )
 ))
