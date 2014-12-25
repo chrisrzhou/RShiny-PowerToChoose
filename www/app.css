@@ -16,8 +16,8 @@ tfoot {
     display: table-header-group;
 }
 
-#datatable {
-    font-size: 10px;
+table {
+    font-size: 11px;
 }
 
 label[for=rep1] {

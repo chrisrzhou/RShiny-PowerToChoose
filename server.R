@@ -45,10 +45,10 @@ shinyServer(function(input, output) {
         df <- resource.df() %>%
             select(-c(EFL_URL, REP_COLOR))  # remove columns
         return(df)
-    }, options = list(pageLength=10))
+    }, options = list(pageLength=10, autoWidth=FALSE))
     
     # download output
-    output$downloadData <- downloadHandler(
+    output$download_data <- downloadHandler(
         filename <- function() {
             sprintf("ptc_data_%s.csv", Sys.Date())
         },

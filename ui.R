@@ -37,7 +37,7 @@ shinyUI(fluidPage(
             sliderInput(inputId="renewable_max", label="", min=0, max=100, value=100),
             hr(),
             
-            downloadButton(outputId = "downloadData", label="Download Data"),
+            downloadButton(outputId = "download_data", label="Download Data"),
             width=3
         ),
         
