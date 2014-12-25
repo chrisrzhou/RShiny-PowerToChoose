@@ -6,8 +6,8 @@ shinyUI(fluidPage(
     sidebarLayout(
         sidebarPanel(
             p(class="text-small", "by chrisrzhou",
-              a(href="https://github.com/chrisrzhou", target="_blank", icon("github")),
-              a(href="http://bl.ocks.org/chrisrzhou", target="_blank", icon("th")),
+              a(href="https://github.com/chrisrzhou", target="_blank", icon("github")), " | ",
+              a(href="http://bl.ocks.org/chrisrzhou", target="_blank", icon("th")), " | ",
               a(href="https://www.linkedin.com/in/chrisrzhou", target="_blank", icon("linkedin"))),
             hr(),
             p(class="text-small", "Data visualizations on market rankings of electricity products and prices in the ERCOT electricity market.  All data is derived from the actual PUC website: ",
