@@ -1,12 +1,13 @@
 shinyUI(fluidPage(
     tags$head(tags$link(rel="stylesheet", type="text/css", href="app.css")),
     
-    titlePanel("Powertochoose Datavis"),
+    titlePanel("Powertochoose Explorer"),
     
     sidebarLayout(
         sidebarPanel(
-            p(class="text-small", "by chrisrzhou",
-              a(href="https://github.com/chrisrzhou", target="_blank", icon("github")), " | ",
+            p(class="text-small",
+              a(href="../", "by chrisrzhou"),
+              a(href="https://github.com/chrisrzhou/RShiny-PowerToChoose", target="_blank", icon("github")), " | ",
               a(href="http://bl.ocks.org/chrisrzhou", target="_blank", icon("th")), " | ",
               a(href="https://www.linkedin.com/in/chrisrzhou", target="_blank", icon("linkedin"))),
             hr(),

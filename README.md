@@ -32,6 +32,8 @@ Throughout the application, the user is empowered with selection widgets to zoom
 
 
 ## Resources
+- [R Shiny Projects](http://ec2-54-183-164-175.us-west-1.compute.amazonaws.com:3838/)
+- [Github Project](https://github.com/chrisrzhou/RShiny-PowerToChoose)
 - [Power to Choose](http://www.powertochoose.org/)
 - [PUC](https://www.puc.texas.gov/)
 - [ERCOT](http://www.ercot.com/)
