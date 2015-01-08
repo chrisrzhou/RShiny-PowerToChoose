@@ -79,8 +79,8 @@ histogram_tooltip <- function(data) {
 
 # color map used in server.R
 REP_COLOR_MAP <- c(
-    "REP1" = "crimson",
-    "REP2" = "goldenrod",
-    "REP3" = "darkseagreen",
-    "REST" = "lightgray"
+    "REP1" = "#1f77b4",
+    "REP2" = "#ff7f0e",
+    "REP3" = "#2ca02c",
+    "REST" = "#dddddd"
 )

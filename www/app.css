@@ -1,15 +1,23 @@
 h1, h2 {
     color: steelblue;
 }
+h2 {
+    font-size: 1.4em;
+}
 
 h3 {
-    font-size: 1.4em;
+    font-size: 1.2em;
     color: darkgray;
 }
 
-.text-small {
-    font-size: 12px;
-    font-style: italic;
+label span, .selectize-dropdown, .selectize-input {
+    font-size: 10px;
+}
+
+label.control-label {
+    font-size: 1.2em;
+    font-weight: 800;
+    color: darkgray;
 }
 
 tfoot {
@@ -20,14 +28,19 @@ table {
     font-size: 11px;
 }
 
+.text-small {
+    font-size: 12px;
+    font-style: italic;
+}
+
 label[for=rep1] {
-    color: crimson
+    color: #1f77b4
 }
 
 label[for=rep2] {
-    color: goldenrod
+    color: #ff7f0e
 }
 
 label[for=rep3] {
-    color: darkseagreen
+    color: #2ca02c
 }

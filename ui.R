@@ -15,23 +15,20 @@ shinyUI(fluidPage(
               a(href="http://www.powertochoose.org", target="_blank", "www.powertochoose.org")),
             hr(),
             
-            h3("Market Filters"),
-            selectInput(inputId="tdu", label="Select TDU:", choices=choices$tdus, selected=choices$tdus[[1]]),
-            selectInput(inputId="usage", label="Select Usage:", choices=choices$usage, selected=choices$usage[[2]]),
-            checkboxGroupInput(inputId="rate_type", label="Choose Rate Types:", choices=choices$rate_types, selected=choices$rate_types[[1]]),
+            selectInput(inputId="tdu", label="TDU:", choices=choices$tdus, selected=choices$tdus[[1]]),
+            selectInput(inputId="usage", label="Usage:", choices=choices$usage, selected=choices$usage[[2]]),
+            checkboxGroupInput(inputId="rate_type", label="Rate Types:", choices=choices$rate_types, selected=choices$rate_types[[1]]),
             hr(),
             
-            h3("REP Filters"),
-            selectInput(inputId="rep1", label="Select REP 1:", choices=choices$reps, selected=choices$reps[[1]]),
-            selectInput(inputId="rep2", label="Select REP 2:", choices=choices$reps, selected=choices$reps[[2]]),
-            selectInput(inputId="rep3", label="Select REP 3:", choices=choices$reps, selected=choices$reps[[3]]),
+            selectInput(inputId="rep1", label="Highlight REP 1:", choices=choices$reps, selected=choices$reps[[1]]),
+            selectInput(inputId="rep2", label="Highlight REP 2:", choices=choices$reps, selected=choices$reps[[2]]),
+            selectInput(inputId="rep3", label="Highlight REP 3:", choices=choices$reps, selected=choices$reps[[3]]),
             p("(REP: Retail Electricity Provider)"),
             hr(),
             
-            h3("Additional Filters"),
-            checkboxGroupInput(inputId="prepaid", label="Choose Prepaid:", choices=choices$booleans, selected=choices$booleans),
-            checkboxGroupInput(inputId="tou", label="Choose Time-of-Use:", choices=choices$booleans, selected=choices$booleans),
-            checkboxGroupInput(inputId="promotion", label="Choose Promotion:", choices=choices$booleans, selected=choices$booleans),
+            checkboxGroupInput(inputId="prepaid", label="Prepaid:", choices=choices$booleans, selected=choices$booleans),
+            checkboxGroupInput(inputId="tou", label="Time-of-Use:", choices=choices$booleans, selected=choices$booleans),
+            checkboxGroupInput(inputId="promotion", label="Promotion:", choices=choices$booleans, selected=choices$booleans),
             sliderInput(inputId="term_length_min", label="Term Length:", min=0, max=36, value=0),
             sliderInput(inputId="term_length_max", label="", min=0, max=36, value=36),
             sliderInput(inputId="renewable_min", label="Renewable:", min=0, max=100, value=0),
@@ -46,6 +43,9 @@ shinyUI(fluidPage(
             tabsetPanel(
                 tabPanel("Rankings",
                          h2("Rankings"),
+                         p(class="text-small", "This section visualizes the rankings of Retail Electric Providers in ERCOT,
+                           providing details on the specific energy plans and prices against the market.  
+                           A summary section is provided to help determine quick insights on the key observations in the market."),
                          hr(),
                          
                          h3("Summary"),
@@ -59,6 +59,8 @@ shinyUI(fluidPage(
                 ),
                 tabPanel("Market",
                          h2("Market"),
+                         p(class="text-small", "This section zooms in on the aggregate visualization of the given market (histogram and scatterplot).  
+                           Interact with the selection widgets to redefine market definitions and conditions."),
                          hr(),
                          
                          h3("Market Histogram"),
@@ -74,11 +76,11 @@ shinyUI(fluidPage(
                 ),
                 tabPanel("Data",
                          h2("Data"),
+                         p(class="text-small", "This section provides a search datatable similar to that found on",
+                           a(href="http://www.powertochoose.org", target="_blank", "www.powertochoose.org")),
                          hr(),
                          
                          h3("Datatable"),
-                         p(class="text-small", "This section provides a search datatable similar to that found on",
-                           a(href="http://www.powertochoose.org", target="_blank", "www.powertochoose.org")),
                          dataTableOutput("datatable"),
                          hr()
                 )
