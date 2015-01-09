@@ -6,7 +6,7 @@ shinyUI(fluidPage(
     sidebarLayout(
         sidebarPanel(
             p(class="text-small",
-              a(href="../", "by chrisrzhou"),
+              a(href="https://chrisrzhou.github.io/", "by chrisrzhou"),
               a(href="https://github.com/chrisrzhou/RShiny-PowerToChoose", target="_blank", icon("github")), " | ",
               a(href="http://bl.ocks.org/chrisrzhou", target="_blank", icon("th")), " | ",
               a(href="https://www.linkedin.com/in/chrisrzhou", target="_blank", icon("linkedin"))),

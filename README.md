@@ -1,4 +1,4 @@
-# Power To Choose Datavis
+# Power To Choose Explorer
 
 ## About
 [Power to Choose](http://www.powertochoose.org/) is a consumer choice website set up by the [PUC](https://www.puc.texas.gov/) to provide customers to compare offers and choose from various electricity plans in Texas.
@@ -32,6 +32,7 @@ Throughout the application, the user is empowered with selection widgets to zoom
 
 
 ## Resources
+- [Homepage](https://chrisrzhou.github.io/)
 - [R Shiny Projects](http://ec2-54-183-164-175.us-west-1.compute.amazonaws.com:3838/)
 - [Github Project](https://github.com/chrisrzhou/RShiny-PowerToChoose)
 - [Power to Choose](http://www.powertochoose.org/)
