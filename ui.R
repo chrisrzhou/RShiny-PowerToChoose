@@ -8,7 +8,7 @@ shinyUI(fluidPage(
             p(class="text-small",
               a(href="https://chrisrzhou.github.io/", target="_blank", "by chrisrzhou"),
               a(href="https://github.com/chrisrzhou/RShiny-PowerToChoose", target="_blank", icon("github")), " | ",
-              a(href="http://bl.ocks.org/chrisrzhou", target="_blank", icon("th")), " | ",
+              a(href="http://bl.ocks.org/chrisrzhou", target="_blank", icon("cubes")), " | ",
               a(href="https://www.linkedin.com/in/chrisrzhou", target="_blank", icon("linkedin"))),
             hr(),
             p(class="text-small", "Data visualizations on market rankings of electricity products and prices in the ERCOT electricity market.  All data is derived from the actual PUC website: ",
