@@ -1,5 +1,5 @@
 # Power To Choose Explorer
-AWS EC2 link: <a href="http://shiny.vis.datanaut.io/PowerToChoose/" target="_blank">http://shiny.vis.datanaut.io/PowerToChoose/</a>
+AWS EC2 Project <a href="http://shiny.vis.datanaut.io/PowerToChoose/" target="_blank">here</a>
 
 ------
 
