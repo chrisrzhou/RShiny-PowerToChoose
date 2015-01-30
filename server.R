@@ -29,7 +29,7 @@ shinyServer(function(input, output) {
                        REP == input$rep1, REP_COLOR_MAP[["REP1"]], ifelse(
                            REP == input$rep2, REP_COLOR_MAP[["REP2"]], ifelse(
                                REP == input$rep3, REP_COLOR_MAP[["REP3"]],
-                               REP_COLOR_MAP[["REST"]])
+                               REP_COLOR_MAP[["OTHER"]])
                        )
                    )
             ) %>%

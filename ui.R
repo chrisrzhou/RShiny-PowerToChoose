@@ -1,4 +1,5 @@
 shinyUI(fluidPage(
+    tags$head(tags$link(rel="stylesheet", type="text/css", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css")),
     tags$head(tags$link(rel="stylesheet", type="text/css", href="app.css")),
     
     titlePanel("Powertochoose Explorer"),
@@ -6,7 +7,7 @@ shinyUI(fluidPage(
     sidebarLayout(
         sidebarPanel(
             p(class="text-small",
-              a(href="https://chrisrzhou.github.io/", target="_blank", "by chrisrzhou"),
+              a(href="http://chrisrzhou.datanaut.io/", target="_blank", "by chrisrzhou"),
               a(href="https://github.com/chrisrzhou/RShiny-PowerToChoose", target="_blank", icon("github")), " | ",
               a(href="http://bl.ocks.org/chrisrzhou", target="_blank", icon("cubes")), " | ",
               a(href="https://www.linkedin.com/in/chrisrzhou", target="_blank", icon("linkedin"))),
