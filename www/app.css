@@ -1,3 +1,7 @@
+h1, h2, h3 {
+    font-weight: 800;
+}
+
 h1, h2 {
     color: steelblue;
 }
@@ -7,7 +11,7 @@ h2 {
 
 h3 {
     font-size: 1.2em;
-    color: darkgray;
+    color: #999999;
 }
 
 label span, .selectize-dropdown, .selectize-input {
@@ -17,7 +21,7 @@ label span, .selectize-dropdown, .selectize-input {
 label.control-label {
     font-size: 1.2em;
     font-weight: 800;
-    color: darkgray;
+    color: #999999;
 }
 
 tfoot {

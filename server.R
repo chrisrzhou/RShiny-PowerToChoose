@@ -14,10 +14,10 @@ shinyServer(function(input, output) {
                    PREPAID %in% input$prepaid,
                    TOU %in% input$tou,
                    PROMOTION %in% input$promotion,
-                   TERM_LENGTH >= input$term_length_min,
-                   TERM_LENGTH <= input$term_length_max,
-                   RENEWABLE >= input$renewable_min,
-                   RENEWABLE <= input$renewable_max) %>%
+                   TERM_LENGTH >= input$term_lengths[1],
+                   TERM_LENGTH <= input$term_lengths[2],
+                   RENEWABLE >= input$renewables[1],
+                   RENEWABLE <= input$renewables[2]) %>%
             mutate(RANK = min_rank(PRICE),
                    # This part is personally hideous, but it's the best way I
                    # can express this with dplyr's methods.  Hopefuly Hadley
