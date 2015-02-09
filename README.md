@@ -276,6 +276,10 @@ Our dataframe `df` is now nicely organized with well-named headers, and we can n
 through `global.R` (calling it once).  In `server.R`, there are a lot more dataframe manipulations used to generate unique
 visualizations, but the basis for these manipulations depend on the dataframe that we have organized cleanly in this step.
 
+For a sneak peek, our cleaned `df` now looks like this:
+
+![image-datatable]
+
 And that's all to the data lifecycle section of the guide!
 
 <sub>(back to [contents](#contents))</sub>
