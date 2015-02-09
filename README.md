@@ -119,7 +119,7 @@ the market.  We identify some interesting clusters:
 -   **Cheap**: Only a few REPs are low-price providers.
 -   **Market median**: Most REPS are clustered around the market-consolidated median price.
 -   **Spammer**: REPs that offer many plans are what I call *"PTC-spammers"*.  This could be a viable technique to
--   overpopulate their plans more frequently across the site for a chance of customers enrolling by accident.
+    overpopulate their plans more frequently across the site for a chance of customers enrolling by accident.
 
 In addition to deriving information from the scatterplot, I have created a short `Summary` section that provides useful
 statistics on the selected dataset/market (e.g. `Best`, `Top 10`, `Top 30`, `Mean`, `Top 10 REPS`).
