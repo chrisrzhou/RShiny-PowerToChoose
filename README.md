@@ -52,7 +52,7 @@ the filter widgets on the left to filter data they want to see (e.g. specifying 
 The native PTC app is great for consumers to compare prices, but it is unable to display the information completely in one
 visualization i.e. the data is paginated and makes it difficult to ask questions on specific ranges and subsets.
 
-The design of this application is to help empower* both consumers and analysts* with complete visualization of the
+The design of this application is to help empower *both consumers and analysts* with complete visualization of the
 data/market, through the use of histograms and scatterplots that are interactively updated based on user inputs.
 
 For instance, all the data on PTC can be visualized concisely as a scatterplot sorted by price and REP rank.
